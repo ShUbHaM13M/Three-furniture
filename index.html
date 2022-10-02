@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+
+  <body class="bg-primary-white min-h-[300vh] overflow-x-hidden">
+    <canvas
+      class="absolute left-0 top-0 w-full h-full block z-[-1]"
+      id="three-canvas"
+    ></canvas>
+    <section
+      id="sofa"
+      class="min-h-screen flex justify-between items-center z-10 flex-wrap"
+    >
+      <div class="flex flex-col justify-start pl-20">
+        <h1 class="text-6xl font-extralight mt-24">
+          This sofa rotates <br />
+          on scroll
+        </h1>
+        <button class="primary mt-8 max-w-fit" type="button">
+          Hover this Button
+        </button>
+        <div class="mt-36">
+          <a class="h-14 w-14 block arrow" href="#chair">
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="50" cy="50" r="49.5" stroke="black" />
+              <path
+                d="M36.6667 56.6667L50 70M50 70L63.3333 56.6667M50 70V30"
+                stroke="#28303F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <p class="mt-4">This arrow keeps on nudging to scroll</p>
+        </div>
+      </div>
+      <div id="sofa-container" style="height: 500px; width: 500px"></div>
+    </section>
+
+    <section
+      id="chair"
+      class="min-h-screen flex z-10 justify-between items-center flex-wrap"
+    >
+      <div
+        id="chair-container"
+        style="height: 500px; width: 500px"
+        class="overflow-hidden"
+      ></div>
+      <div class="flex flex-col pr-32">
+        <h1 class="text-6xl font-extralight mt-24">
+          This chair <br />
+          zooms in <br />
+          when you scroll
+        </h1>
+        <div class="mt-36">
+          <div class="flex justify-between">
+            <a class="h-14 w-14 arrow block" href="#mirror">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="50" cy="50" r="49.5" stroke="black" />
+                <path
+                  d="M36.6667 56.6667L50 70M50 70L63.3333 56.6667M50 70V30"
+                  stroke="#28303F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a class="h-14 w-14 arrow block" href="#sofa">
+              <svg
+                class="rotate-180"
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="50" cy="50" r="49.5" stroke="black" />
+                <path
+                  d="M36.6667 56.6667L50 70M50 70L63.3333 56.6667M50 70V30"
+                  stroke="#28303F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="mt-4">This arrow keeps on nudging to scroll</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="mirror"
+      class="flex flex-col justify-center items-center min-h-screen flex-wrap"
+    >
+      <div id="mirror-container" style="height: 500px; width: 500px"></div>
+      <h1>
+        This mirror revolves inside the <br />
+        frame, on scroll
+      </h1>
+      <a class="h-14 w-14 arrow block ml-auto mr-12" href="#sofa">
+        <svg
+          class="rotate-180"
+          width="100%"
+          height="100%"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="50" cy="50" r="49.5" stroke="black" />
+          <path
+            d="M36.6667 56.6667L50 70M50 70L63.3333 56.6667M50 70V30"
+            stroke="#28303F"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </section>
+    <div class="h-96"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

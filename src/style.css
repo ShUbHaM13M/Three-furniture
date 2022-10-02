@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+button.primary {
+  box-shadow: 0px 14px 39px 0px #ffc4519e;
+  @apply bg-accent text-center font-medium rounded-lg transition-shadow duration-300 ease-out hover:shadow-none focus:shadow-none text-xl px-9 py-4;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: end;
+}
